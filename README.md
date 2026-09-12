@@ -10,12 +10,14 @@ Results
 
 Tuned models on the held-out test set (11,449 galaxies), all nine features:
 
-Model	MAE	MSE	Bias	σ<sub>NMAD</sub>	Outlier %
-Linear regression	0.0712	0.0118	0.0054	0.0499	5.34
-kNN	0.0477	0.0075	0.0027	0.0274	2.91
-Random forest	0.0460	0.0071	0.0023	0.0259	2.84
-XGBoost	0.0462	0.0072	0.0024	0.0264	2.81
-MLP	0.0472	0.0073	0.0036	0.0275	2.80
+| Model             |        MAE |        MSE |       Bias |     σ_NMAD | Outliers (%) |
+|:------------------|-----------:|-----------:|-----------:|-----------:|-------------:|
+| Linear regression |     0.0712 |     0.0118 |     0.0054 |     0.0499 |         5.34 |
+| kNN               |     0.0477 |     0.0075 |     0.0027 |     0.0274 |         2.91 |
+| Random forest     | **0.0460** | **0.0071** | **0.0023** | **0.0259** |         2.84 |
+| XGBoost           |     0.0462 |     0.0072 |     0.0024 |     0.0264 |         2.81 |
+| MLP               |     0.0472 |     0.0073 |     0.0036 |     0.0275 |     **2.80** |
+
 
 The four non-linear models sit within 0.0004 MSE of each other. With 28× less data than Henghes et al. we match or slightly beat their σ<sub>NMAD</sub> for every non-linear model; they win on the tail-sensitive MAE and MSE. Non-linear models get nearly the same performance from magnitudes alone or colors alone.
 
